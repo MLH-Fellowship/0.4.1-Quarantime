@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../logo.svg";
 import { Layout, Menu } from "antd";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import "./App.css";
 

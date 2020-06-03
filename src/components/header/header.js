@@ -7,11 +7,11 @@ const { Header } = Layout;
 const navBarMenus = [
   {
     label: "Login",
-    link: "/login"
+    link: "/#/login"
   },
   {
     label: "Add Posts",
-    link: "/add"
+    link: "/#/add"
   },
 
 ];
