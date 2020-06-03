@@ -1,12 +1,12 @@
 import React from "react";
-import Feed from "../feed";
+import TagLists from "../tagList";
 
-function RightPanel() {
+function Panel() {
   return (
-    <div class="w-4/6 p-2">
-      <Feed />
+    <div class="w-2/6 p-2">
+      <TagLists />
     </div>
   );
 }
 
-export default RightPanel;
+export default Panel;
