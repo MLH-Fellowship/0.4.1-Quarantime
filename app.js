@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-
+const path = require('path')
 const app = express();
 
 // Passport config
@@ -31,6 +31,9 @@ app.use(
     })
 );
 
+app.use(express.static(path.join(__dirname, 'build')))
+
+
 // Passport Middleware : put after sessions
 app.use(passport.initialize()); // passport.authenticate should run this will put passport as middleware
 app.use(passport.session());    // tells that session is available and will use it
@@ -49,6 +52,8 @@ app.use(function(req, res, next) {
 //Routes
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
+
+
 
 const PORT = process.env.PORT || 5000;
 
