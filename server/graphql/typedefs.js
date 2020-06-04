@@ -8,6 +8,7 @@ module.exports = gql`
     username: String!
     comments: [Comment]!
     likes: [Like]!
+    tags: [Tag]
   }
   type Comment {
     id: ID!
@@ -15,10 +16,16 @@ module.exports = gql`
     username: String!
     body: String!
   }
-  type Like{
+  type Like {
     id: ID!
     createdAt: String!
     username: String!
+  }
+  type Tag {
+    id: ID!
+    createdAt: String!
+    name: String!
+    description: String!
   }
   type User {
     id: ID!
@@ -36,6 +43,7 @@ module.exports = gql`
   type Query {
     getPosts: [Post]
     getPost(postId: ID!): Post
+    getTags: [Tag]
   }
   type Mutation {
     register(registerInput: RegisterInput): User!
@@ -45,5 +53,6 @@ module.exports = gql`
     createComment(postId: String!, body: String!): Post!
     deleteComment(postId: ID!, commentId: ID!): Post!
     likePost(postId: ID!): Post!
+    createTag(name: String!, description: String): Tag
   }
-`;
+`
