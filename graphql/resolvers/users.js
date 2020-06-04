@@ -77,7 +77,7 @@ module.exports = {
           }
         });
       }
-      // hash password & create and authrization token
+      // hash password & create and authorization token
       password = await bcrypt.hash(password, 12);
 
       const newUser = new User({

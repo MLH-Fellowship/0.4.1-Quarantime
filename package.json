@@ -4,6 +4,7 @@
   "description": "- Share their stories during Quarantine time, helping the community by making them aware of the opportunities available - Open-source the projects they worked on, be it at Hackathons, School projects, etc. so that other students can collaborate & learn.",
   "main": "index.js",
   "scripts": {
+    "serve": "node index",
     "start": "nodemon index"
   },
   "repository": {
