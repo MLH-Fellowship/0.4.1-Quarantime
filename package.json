@@ -19,7 +19,9 @@
   "homepage": "https://github.com/MLH-Fellowship/0.4.1-Quarantime#readme",
   "dependencies": {
     "apollo-server": "^2.14.1",
+    "bcryptjs": "^2.4.3",
     "graphql": "^15.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.17"
   },
   "devDependencies": {
