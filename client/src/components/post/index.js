@@ -1,25 +1,28 @@
 import React from "react";
-import { Avatar } from 'antd'
+import { Avatar, Comment,  Divider } from 'antd'
+import ReactMarkdown from 'react-markdown'
 
 function Post({...props}) {
-
+  console.log('props.comments',props.comments)
   return (
-    <div class='max-w-sm w-full lg:max-w-full lg:flex my-2 '>
-      <div class=' min-w-full border-r border-b border-l border-gray-400 lg:border-l rounded-t lg:rounded-t-none lg:rounded-l lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal'>
-        <div class='mb-8'>
-          <p class='text-sm text-gray-600 flex items-center'>
+    <div className='max-w-sm w-full lg:max-w-full lg:flex my-2 '>
+      <div className=' min-w-full border-r border-b border-l border-gray-400 lg:border-l rounded-t lg:rounded-t-none lg:rounded-l lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal'>
+        <div className='mb-8'>
+          <p className='text-sm text-gray-600 flex items-center'>
             {props.createdAt}
           </p>
 
-          <p class='text-gray-700 text-base text-xl'>{props.body}</p>
+          <p className='text-gray-700 text-base text-xl'>
+            <ReactMarkdown source={props.body} />
+          </p>
         </div>
-        <div class='flex  items-stretch'>
+        <div className='flex  items-stretch'>
           <Avatar>{props.username.charAt(0)}</Avatar>
-          <p class='text-gray-900 leading-none w-5/6 px-4 py-1 text-xl font'>
+          <p className='text-gray-900 leading-none w-5/6 px-4 py-1 text-xl font'>
             {props.username}
           </p>
-          <div class='text-sm self-end w-1/6'>
-            <p class='text-gray-600 flex flex-row '>
+          <div className='text-sm self-end w-1/6'>
+            <p className='text-gray-600 flex flex-row '>
               <span className='px-4 py-2 w-3/6 '>
                 <svg
                   className='hover:bg-white hover:text-gray'
@@ -35,6 +38,22 @@ function Post({...props}) {
             </p>
           </div>
         </div>
+        <Divider />
+        <p className='text-lg font-semibold'>Comments</p>
+     {props.comments.map(({ username , body}) => {
+          return (
+            <Comment
+              author={<a>{username}</a>}
+              avatar={<Avatar>{username.charAt(0)}</Avatar>}
+              content={
+                <p>
+                  <ReactMarkdown source={body} />
+                  
+                </p>
+              }
+            />
+          )
+        })}
       </div>
     </div>
   )
