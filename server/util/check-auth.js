@@ -7,10 +7,7 @@ module.exports = (context) => {
   // context = { ... headers }
   const authHeader = context.req.headers.authorization;
   if (authHeader) {
-    // get token form header
-    // of the form Bearer ...
-    // when split, the second one in the list will be the token 
-    // form: Bearer ....
+    // Bearer ....
     const token = authHeader.split('Bearer ')[1];
     if (token) {
       try {

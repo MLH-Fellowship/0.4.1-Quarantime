@@ -3,22 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/react-hooks": "^3.1.5",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "antd": "^4.3.1",
-    "apollo-boost": "^0.4.9",
-    "graphql": "^15.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-markdown": "^4.3.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "@apollo/react-hooks": "0.1.0-beta.7",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.2",
+    "apollo-link-context": "^1.0.18",
+    "apollo-link-http": "^1.5.14",
+    "graphql": "^14.3.1",
+    "graphql-tag": "^2.10.1",
+    "jwt-decode": "^2.2.0",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
-    "build:style": "tailwind build src/index.css -o src/styles.css",
-    "start": "npm run build:style && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -37,10 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.8.0",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6"
   }
 }

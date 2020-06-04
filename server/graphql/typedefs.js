@@ -8,7 +8,12 @@ module.exports = gql`
     username: String!
     comments: [Comment]!
     likes: [Like]!
+<<<<<<< HEAD:graphql/typedefs.js
+    likeCount: Int!
+    commentCount: Int!
+=======
     tags: [Tag]
+>>>>>>> 859f5e79c9a14966a8ec4453d7f5582609cd667b:server/graphql/typedefs.js
   }
   type Comment {
     id: ID!
@@ -55,4 +60,11 @@ module.exports = gql`
     likePost(postId: ID!): Post!
     createTag(name: String!, description: String): Tag
   }
+<<<<<<< HEAD:graphql/typedefs.js
+  type Subscription {
+    newPost: Post!
+  }
+`;
+=======
 `
+>>>>>>> 859f5e79c9a14966a8ec4453d7f5582609cd667b:server/graphql/typedefs.js
