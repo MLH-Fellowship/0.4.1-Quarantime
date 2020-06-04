@@ -1,58 +1,30 @@
 {
-  "name": "authentication",
+  "name": "0.4.1-Quarantime",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "- Share their stories during Quarantine time, helping the community by making them aware of the opportunities available - Open-source the projects they worked on, be it at Hackathons, School projects, etc. so that other students can collaborate & learn.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLH-Fellowship/0.4.1-Quarantime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MLH-Fellowship/0.4.1-Quarantime/issues"
+  },
+  "homepage": "https://github.com/MLH-Fellowship/0.4.1-Quarantime#readme",
   "dependencies": {
+    "apollo-server": "^2.14.1",
     "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
-    "ejs": "^3.1.3",
-    "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.17.1",
-    "mongoose": "^5.9.17",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-        "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "antd": "^4.3.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "graphql": "^15.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.17"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4",
-    "autoprefixer": "^9.8.0",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6"
-  },
-  "scripts": {
-    "server:start": "node app.js",
-    "server:dev": "nodemon app.js",
-     "build:style": "tailwind build src/index.css -o src/styles.css",
-    "start": "npm run build:style && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-    "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "proxy": "http://localhost:5080",
-  "author": "",
-  "license": "ISC"
+    "nodemon": "^2.0.4"
+  }
 }
