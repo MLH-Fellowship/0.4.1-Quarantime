@@ -1,18 +1,16 @@
-const {AuthenticationError, UserInputError} = require('apollo-server');
+const { AuthenticationError, UserInputError } = require('apollo-server');
 
 const checkAuth = require('../../util/check-auth');
 const Post = require('../../models/Post');
 
 module.exports = {
   Mutation: {
-    createComment: async (parent, {postId, body}, context) => {
-      const {username} = checkAuth(context);
-
-      // logged in
+    createComment: async (_, { postId, body }, context) => {
+      const { username } = checkAuth(context);
       if (body.trim() === '') {
         throw new UserInputError('Empty comment', {
           errors: {
-            body: 'Comment body must not be empty'
+            body: 'Comment body must not empty'
           }
         });
       }
@@ -27,27 +25,25 @@ module.exports = {
         });
         await post.save();
         return post;
-      } else throw new UserInputError('Post unavailable');
+      } else throw new UserInputError('Post not found');
     },
-    async deleteComment(parent, {postId, commentId}, context) {
-      const {username} = checkAuth(context);
+    async deleteComment(_, { postId, commentId }, context) {
+      const { username } = checkAuth(context);
 
       const post = await Post.findById(postId);
-    
+
       if (post) {
-        // find index of comment in the array
         const commentIndex = post.comments.findIndex((c) => c.id === commentId);
-        
-        // check if it is the owner of the event
+
         if (post.comments[commentIndex].username === username) {
-          post.comments.splice(commentIndex, 1); // remove just 1
+          post.comments.splice(commentIndex, 1);
           await post.save();
           return post;
         } else {
-          throw new AuthenticationError('Not allowed');
+          throw new AuthenticationError('Action not allowed');
         }
       } else {
-        throw new UserInputError('Post unavailable');
+        throw new UserInputError('Post not found');
       }
     }
   }
