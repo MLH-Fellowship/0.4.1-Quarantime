@@ -41,16 +41,3 @@ function TagLists() {
 
 export default TagLists;
 
-/**
- * 
- *  <List
-          itemLayout="horizontal"
-          dataSource={tags}
-          renderItem={item => (
-            <List.Item>
-              <List.Item.Meta title={<a href="/">{item.tag}</a>} />
-            </List.Item>
-          )}
-        />
- * 
- */
