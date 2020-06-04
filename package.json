@@ -4,7 +4,7 @@
   "description": "- Share their stories during Quarantine time, helping the community by making them aware of the opportunities available - Open-source the projects they worked on, be it at Hackathons, School projects, etc. so that other students can collaborate & learn.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
     "apollo-server": "^2.14.1",
     "graphql": "^15.0.0",
     "mongoose": "^5.9.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
