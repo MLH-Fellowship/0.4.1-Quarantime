@@ -7,11 +7,14 @@
 ## Tech Used
 - GraphQL
 - MongoDB Atlas (GCP)
+- mongoose
 - Node.js
 - Express.js
 - React
+- react-router-dom
 - Semantic UI React
 - Apollo Server
+- bcryptjs
 - JWT
 
 ## Building the project
