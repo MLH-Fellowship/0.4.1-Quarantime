@@ -16,12 +16,12 @@
 ## Building the project
 ### Setting up server
 - Navigate to the repository 0.4.1-Quarantime
-- $ npm install
-- $ npm start
+- ```$ npm install```
+- ```$ npm start```
 ### Setting up client
 - Navigate to 0.4.1-Quarantime/client
-- $ npm install
-- $ yarn start
+- ```$ npm install```
+- ```$ yarn start```
 
 ## Contributing to the project:
 [CONTRIBUTING.md](https://github.com/MLH-Fellowship/0.4.1-Quarantime/blob/master/CONTRIBUTING.md)
