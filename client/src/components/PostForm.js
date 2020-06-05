@@ -30,16 +30,16 @@ function PostForm() {
   return (
     <>
       <Form onSubmit={onSubmit}>
-        <h2>How'd you spend your Quarantime?</h2>
+        <h2 id="spendQuarantime">How'd you spend your Quarantime? ...</h2>
         <Form.Field>
-          <Form.Input
+          <Form.Input id="post-form"
             placeholder="Share experience, projects, opportunities, etc"
             name="body"
             onChange={onChange}
             value={values.body}
             error={error ? true : false}
           />
-          <Button type="submit" color="green">
+          <Button type="submit" id="post-submit">
             Submit
           </Button>
         </Form.Field>

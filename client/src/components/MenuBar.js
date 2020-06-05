@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { AuthContext } from '../context/auth';
 
+
 function MenuBar() {
   const { user, logout } = useContext(AuthContext);
   const pathname = window.location.pathname;

@@ -17,11 +17,11 @@ function Home() {
   return (
     <Grid columns={1}>
       <Grid.Row className="page-title">
-        <h1>Quarantime</h1>
+        <h1 id="quarantime">QUARANTIME</h1>
       </Grid.Row>
       <Grid.Row>
         {user && (
-          <Grid.Column>
+          <Grid.Column class="question-container">
             <PostForm />
           </Grid.Column>
         )}
@@ -31,7 +31,7 @@ function Home() {
           <Transition.Group>
             {posts &&
               posts.map((post) => (
-                <Grid.Column key={post.id} style={{ marginBottom: 20, marginTop: 20 }}>
+                <Grid.Column class="post-container" key={post.id} style={{ marginBottom: 20, marginTop: 20 }}>
                   <PostCard post={post} />
                 </Grid.Column>
               ))}
