@@ -8,6 +8,7 @@
 - GraphQL
 - MongoDB Atlas (GCP)
 - Node.js
+- Express.js
 - React
 - Semantic UI React
 - Apollo Server
