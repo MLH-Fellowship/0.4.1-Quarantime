@@ -1,13 +1,65 @@
+body{
+  color: #087187;
+  background-color: #aec9cf;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 .page-title {
   display: block !important;
   text-align: center;
-  font-size: 2rem;
   margin-top: 10px;
+  
 }
+
+#post-form{
+  background-color: #dfe7eb;
+}
+
+#post-card-home{
+  background-color: #dfe7eb;
+}
+
+#post-card-single{
+  background-color: #dfe7eb;
+}
+
+#user-post{
+  font-family: 'Source Code Pro', monospace;
+}
+
+#quarantime{
+  color: #087187;
+  font-size: 4rem;
+  /* font-family: 'Sunflower', sans-serif; */
+  font-family: 'Source Code Pro', monospace;
+}
+
+#spendQuarantime{
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+}
+
+.question-container{
+  background-color: white;
+}
+
+.post-container{
+  background-color: white;
+}
+
+#post-submit{
+  background-color: #0d8e94;
+  color: #282c34;
+  font-family: 'Source Code Pro', monospace;
+}
+
 
 .form-container {
   width: 400px;
   margin: auto;
+
 }
 
 .ui.teal.button:focus,

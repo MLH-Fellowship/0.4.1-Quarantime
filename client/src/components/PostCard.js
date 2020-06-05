@@ -14,14 +14,14 @@ function PostCard({
   const { user } = useContext(AuthContext);
 
   return (
-    <Card fluid>
+    <Card id="post-card-home" fluid>
       <Card.Content>
         <Image
           floated="right"
           size="mini"
           src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
         />
-        <Card.Header>{username}</Card.Header>
+        <Card.Header id="user-post">{username}</Card.Header>
         <Card.Meta as={Link} to={`/posts/${id}`}>
           {moment(createdAt).fromNow(true)}
         </Card.Meta>
