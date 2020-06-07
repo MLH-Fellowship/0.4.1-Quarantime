@@ -21,7 +21,7 @@ function Home() {
       </Grid.Row>
       <Grid.Row>
         {user && (
-          <Grid.Column class="question-container">
+          <Grid.Column>
             <PostForm />
           </Grid.Column>
         )}
@@ -31,7 +31,7 @@ function Home() {
           <Transition.Group>
             {posts &&
               posts.map((post) => (
-                <Grid.Column class="post-container" key={post.id} style={{ marginBottom: 20, marginTop: 20 }}>
+                <Grid.Column key={post.id} style={{ marginBottom: 20, marginTop: 20 }}>
                   <PostCard post={post} />
                 </Grid.Column>
               ))}
