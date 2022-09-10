@@ -6,15 +6,19 @@ import { AuthContext } from '../context/auth';
 import PostCard from '../components/PostCard';
 import PostForm from '../components/PostForm';
 import { FETCH_POSTS_QUERY } from '../util/graphql';
+import Sppiner from './Sppiner';
+
+
 
 function Home() {
   const { user } = useContext(AuthContext);
   const {
     loading,
-    data: { getPosts: posts }
-  } = useQuery(FETCH_POSTS_QUERY);
+    data: { getPosts: posts} ={}}
+   = useQuery(FETCH_POSTS_QUERY);
 
   return (
+   
     <Grid columns={1}>
       <Grid.Row className="page-title">
         <h1 id="quarantime">QUARANTIME</h1>
@@ -26,7 +30,10 @@ function Home() {
           </Grid.Column>
         )}
         {loading ? (
-          <h1>Please wait..</h1>
+<Grid.Row className="page-title">
+ 
+        <h1 ><Sppiner/></h1>
+        </Grid.Row>
         ) : (
           <Transition.Group>
             {posts &&
