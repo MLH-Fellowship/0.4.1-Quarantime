@@ -55,6 +55,10 @@ body{
 
 }
 
+.form {
+  padding-right: 1.3rem;
+}
+
 .ui.teal.button:focus,
 .ui.teal.buttons .button:focus {
   background-color: #00b5ad;
